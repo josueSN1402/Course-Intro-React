@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+* Figma: https://www.figma.com/file/wgGq2RUphXGVdAWi8gBtJt/TO-DO-APP?node-id=0%3A1
+* Prototype: https://www.figma.com/proto/wgGq2RUphXGVdAWi8gBtJt/TO-DO-APP?node-id=5%3A5&scaling=scale-down&page-id=0%3A1&starting-point-node-id=5%3A5
+* Deploy: https://josuesn1402-todo-app-react.vercel.app
