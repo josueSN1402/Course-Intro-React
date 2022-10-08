@@ -30,15 +30,30 @@
   text-decoration: line-through;
 }
 
-.Icon-check,
-.Icon-delete {
+.Icons-container {
+  display: flex;
+}
+
+.Icon {
+  width: 2.2rem;
+  height: 2.2rem;
   cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.Icon-check:hover path {
-  fill: var(--success);
+.Icon-check {
+  background-image: url('../images/check.svg');
 }
 
-.Icon-delete:hover path {
-  fill: var(--danger);
+.Icon-delete {
+  background-image: url('../images/close.svg');
+}
+
+.Icon-check:hover {
+  background-image: url('../images/check-active.svg');
+}
+
+.Icon-delete:hover {
+  background-image: url('../images/close-active.svg');
 }
