@@ -9,8 +9,8 @@
 .App {
   position: relative;
   max-width: 600px;
-  min-height: 95vh;
-  max-height: 600px;
+  height: 95vh;
+  max-height: 700px;
   padding: 3rem;
   background-color: var(--black-regular);
   border-radius: 1.5rem;
