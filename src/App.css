@@ -8,7 +8,7 @@
 
 .App {
   position: relative;
-  max-width: 600px;
+  width: 335px;
   height: 95vh;
   max-height: 700px;
   padding: 3rem;
