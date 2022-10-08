@@ -1,0 +1,24 @@
+.Tasks-Container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 1rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Tasks-List {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  max-height: 21rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.Tasks-List::-webkit-scrollbar {
+  width: 0;
+}
