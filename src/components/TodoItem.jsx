@@ -12,7 +12,7 @@ function TodoItem(props) {
             <p className='TodoItem-p'>{props.text}</p>
 
             <div className='Icons-container'>
-                <div className='Icon Icon-check'></div>
+                {!props.completed && <div className='Icon Icon-check'></div>}
                 <div className='Icon Icon-delete'></div>
             </div>
         </li>
