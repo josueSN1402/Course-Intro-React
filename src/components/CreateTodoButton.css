@@ -1,25 +1,35 @@
 .CreateTodoButton {
-  background-color: #61DAFA;
-  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%) rotate(0);
+  background-color: var(--white);
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 50px;
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
   font-weight: bold;
   color: #FAFAFA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 64px;
-  width: 64px;
+  display: grid;
+  place-items: center;
+  height: 4rem;
+  width: 4rem;
 
-  transform: rotate(0);
   transition: .3s ease;
+  box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.3);
 }
 
 .CreateTodoButton:hover {
-  transform: rotate(224deg);
+  transform: translateX(-50%) rotate(-135deg);
+}
+
+.Icon-add {
+  width: 2rem;
+  height: 2rem;
+  background-image: url('../images/add.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Icon-add:hover {
+  background-image: url('../images/add-active.svg');
 }

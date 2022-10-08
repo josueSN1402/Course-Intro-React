@@ -1,5 +1,4 @@
 .Container {
-  position: relative;
   display: grid;
   place-items: center;
   width: 100%;
@@ -8,6 +7,7 @@
 }
 
 .App {
+  position: relative;
   max-width: 600px;
   min-height: 95vh;
   max-height: 600px;
