@@ -12,8 +12,8 @@ function TodoItem(props) {
             <p className='TodoItem-p'>{props.text}</p>
 
             <div className='Icons-container'>
-                {!props.completed && <div className='Icon Icon-check'></div>}
-                <div className='Icon Icon-delete'></div>
+                {!props.completed && <div className='Icon Icon-check' aria-label='Botón para tarea terminada'></div>}
+                <div className='Icon Icon-delete' aria-label='Botón para eliminar tarea'></div>
             </div>
         </li>
     );
