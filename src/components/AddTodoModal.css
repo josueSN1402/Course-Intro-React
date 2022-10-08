@@ -1,0 +1,124 @@
+.Background-section {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  display: grid;
+  place-items: center;
+}
+
+.Modal {
+  position: relative;
+  min-width: 295px;
+  min-height: 200px;
+  background-color: #1D1E1E;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  padding: 32px 15px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.Modal-title {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+  margin: 0 0 20px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.Modal-input {
+  width: 100%;
+  min-height: 38px;
+  max-height: 100px;
+  padding: 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black-medium);
+  resize: vertical;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  scrollbar-width: none;
+  outline: none;
+}
+
+.Modal-input::placeholder {
+  color: var(--gray-semidark);
+}
+
+.Modal-input::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Modal-input::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.Modal-input::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.Modal-input::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+.Modal-btn {
+  width: 15rem;
+  padding: 8px 10px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: .2rem solid var(--white);
+  color: var(--white);
+  border-radius: 6px;
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.Modal-btn:hover {
+  background-color: var(--white);
+  color: var(--black-regular);
+}
+
+.Modal-btn:active {
+  border: .2rem solid var(--gray-regular);
+  background-color: var(--gray-regular);
+  color: var(--black-medium);
+}
+
+.Icon-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  background-image: url('../images/close.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Icon-close:hover {
+  background-image: url('../images/close-active.svg');
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { TodoSearch } from './components/TodoSearch';
 import { TodoList } from './components/TodoList';
 import { CreateTodoButton } from './components/CreateTodoButton';
+// import { AddTodoModal } from './components/AddTodoModal';
 import './App.css';
 
 const todos = [
@@ -18,6 +19,7 @@ const todos = [
 function App() {
     return (
         <div className='Container'>
+            {/*<AddTodoModal />*/}
             <section className='App'>
                 <h1 className='Title'>MY TASKS</h1>
                 <TodoSearch />
