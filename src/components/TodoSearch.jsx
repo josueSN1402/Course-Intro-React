@@ -9,7 +9,7 @@ function TodoSearch({searchValue, setSearchValue}) {
         <label htmlFor="search">
             <input 
                 className='TodoSearch'
-                placeholder='Cebolla'
+                placeholder='Buscar tarea'
                 id='search'
                 value={searchValue}
                 onChange={onSearchValueChange}
