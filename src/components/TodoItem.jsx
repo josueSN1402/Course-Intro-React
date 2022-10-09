@@ -16,13 +16,17 @@ function TodoItem(props) {
                     <div
                         className='Icon Icon-check'
                         aria-label='Botón para tarea terminada'
+                        tabIndex={0}
                         onClick={props.onComplete}
+                        role='button'
                     ></div>
                 )}
                 <div
                     className='Icon Icon-delete'
                     aria-label='Botón para eliminar tarea'
+                    tabIndex={0}
                     onClick={props.onDelete}
+                        role='button'
                 ></div>
             </div>
         </li>

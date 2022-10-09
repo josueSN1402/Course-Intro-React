@@ -7,7 +7,7 @@ function TodoList(props) {
         <section className='Tasks-Container'>
             <TodoCounter title={props.title} count={props.count} />
 
-            <ul className='Tasks-List'>{props.children}</ul>
+            <ul className='Tasks-List' role='list' tabIndex="-1">{props.children}</ul>
         </section>
     );
 }
