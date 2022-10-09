@@ -1,13 +1,13 @@
-import './TodoSearch.css';
+import '../styles/components/TodoSearch.css';
 
-function TodoSearch({searchValue, setSearchValue}) {
+function TodoSearch({ searchValue, setSearchValue }) {
     const onSearchValueChange = e => {
         setSearchValue(e.target.value);
-    }
+    };
 
     return (
-        <label htmlFor="search">
-            <input 
+        <label htmlFor='search'>
+            <input
                 className='TodoSearch'
                 placeholder='Buscar tarea'
                 id='search'

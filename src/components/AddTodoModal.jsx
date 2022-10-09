@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddTodoModal.css';
+import '../styles/components/AddTodoModal.css';
 
 function AddTodoModal(props) {
     return (

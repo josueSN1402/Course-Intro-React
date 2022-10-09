@@ -25,11 +25,11 @@
 .Icon-add {
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url('../images/add.svg');
+  background-image: url('../../images/add.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .Icon-add:hover {
-  background-image: url('../images/add-active.svg');
+  background-image: url('../../images/add-active.svg');
 }
