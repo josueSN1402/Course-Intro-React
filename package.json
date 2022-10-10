@@ -1,5 +1,5 @@
 {
-  "homepage":"https://josuesn1402-todo-app-react.vercel.app",
+  "homepage":"https://josuesn1402.github.io/Course-Intro-React/",
   "name": "course-intro-react",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
