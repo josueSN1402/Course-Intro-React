@@ -114,11 +114,11 @@ form {
   width: 2.2rem;
   height: 2.2rem;
   cursor: pointer;
-  background-image: url('../images/close.svg');
+  background-image: url('../../images/close.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .Icon-close:hover {
-  background-image: url('../images/close-active.svg');
+  background-image: url('../../images/close-active.svg');
 }

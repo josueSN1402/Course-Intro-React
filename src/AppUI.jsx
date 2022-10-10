@@ -4,7 +4,8 @@ import { TodoList } from './components/TodoList';
 import { CreateTodoButton } from './components/CreateTodoButton';
 import { TodoItem } from './components/TodoItem';
 import { TodoContext } from './components/TodoContext';
-// import { AddTodoModal } from './components/AddTodoModal';
+import { Modal } from './components/Modal';
+import { AddTodoModal } from './components/AddTodoModal';
 import './styles/layout/App.css';
 
 function AppUI() {
@@ -18,6 +19,8 @@ function AppUI() {
         searchValue,
         todos,
         getSearchValue,
+        openModal,
+        setOpenModal
     } = useContext(TodoContext);
 
     const TaksList = props => {
@@ -70,7 +73,13 @@ function AppUI() {
                     status={true}
                 />
 
-                <CreateTodoButton />
+                {!!openModal && (
+                    <Modal>
+                        <AddTodoModal setOpenModal={setOpenModal} />
+                    </Modal>
+                )}
+
+                <CreateTodoButton setOpenModal={setOpenModal} />
             </section>
         </div>
     );
