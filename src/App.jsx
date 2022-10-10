@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { AppUI } from './AppUI';
 import { TodoProvider } from './components/TodoContext';
 
