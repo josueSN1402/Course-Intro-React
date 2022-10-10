@@ -14,6 +14,15 @@ function TodoProvider(props) {
     const [searchValue, setSearchValue] = useState('');
     const [openModal, setOpenModal] = useState(false);
 
+    const addTodo = (text) => {
+      const newTodos = [...todos];
+      newTodos.push({
+        completed: false,
+        text,
+      });
+      saveTodos(newTodos);
+    };
+
     const completeTodo = text => {
         const todoIndex = todos.findIndex(todo => todo.text === text);
         const newTodos = [...todos];
@@ -48,6 +57,7 @@ function TodoProvider(props) {
                 getSearchValue,
                 openModal,
                 setOpenModal,
+                addTodo
             }}
         >
             {props.children}
