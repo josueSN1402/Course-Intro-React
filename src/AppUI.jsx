@@ -7,11 +7,12 @@ import { TodoItem } from './components/TodoItem';
 import './styles/layout/App.css';
 
 function AppUI({
+    loading,
+    error,
     completedTodos,
     uncompletedTodos,
     searchValue,
     setSearchValue,
-    searchedTodos,
     completeTodo,
     deleteTodo,
     todos,
@@ -53,6 +54,9 @@ function AppUI({
                     searchValue={searchValue}
                     setSearchValue={setSearchValue}
                 />
+                {error && <p>Desespérate, hubo un error...</p>}
+                {loading && <p>Estamos cargando, no desesperes...</p>}
+                {/*{(!loading) && <p>¡Crea tu primer TODO!</p>}*/}
 
                 <TaksList
                     title='Pendientes'
