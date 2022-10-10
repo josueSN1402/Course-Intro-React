@@ -10,6 +10,7 @@ Aplicación para tareas pendientes usando `React`
 ## Deploy
 * [En Vercel](https://josuesn1402-todo-app-react.vercel.app)
 * [En Netlify](https://josuesn1402-todo-app-react.netlify.app)
+* [En GitHub Pages](https://josuesn1402.github.io/Course-Intro-React/)
 
 ## Dato:
 El proyecto esta creado usando `yarn`, así que para ejecutarlo solo usa `yarn start`.
