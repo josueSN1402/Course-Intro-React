@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Course-Intro-React/static/css/main.1ade0250.css",
+    "main.js": "/Course-Intro-React/static/js/main.ac19cdd3.js",
+    "static/media/close-active.svg": "/Course-Intro-React/static/media/close-active.bcc86e3c5d50d5ee247e.svg",
+    "static/media/close.svg": "/Course-Intro-React/static/media/close.d9d85af1c70284882567.svg",
+    "index.html": "/Course-Intro-React/index.html",
+    "static/media/add-active.svg": "/Course-Intro-React/static/media/add-active.cdb191bbc28a0c233d00.svg",
+    "static/media/add.svg": "/Course-Intro-React/static/media/add.cd5d25399a9caa2492c2.svg",
+    "static/media/check-active.svg": "/Course-Intro-React/static/media/check-active.7be2f660a32ab04f1332.svg",
+    "static/media/check.svg": "/Course-Intro-React/static/media/check.c11d994a8aa007c4787e.svg",
+    "main.1ade0250.css.map": "/Course-Intro-React/static/css/main.1ade0250.css.map",
+    "main.ac19cdd3.js.map": "/Course-Intro-React/static/js/main.ac19cdd3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ade0250.css",
+    "static/js/main.ac19cdd3.js"
+  ]
+}
