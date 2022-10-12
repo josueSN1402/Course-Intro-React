@@ -1,19 +1,19 @@
-import React from "react"
-import ContentLoader from "react-content-loader"
+import React from 'react';
+import ContentLoader from 'react-content-loader';
 
-const TodoItemLoading = (props) => (
-  <ContentLoader 
-    speed={2}
-    width={400}
-    height={150}
-    viewBox="0 0 400 150"
-    backgroundColor="#f3f3f3"
-    foregroundColor="#ecebeb"
-    {...props}
-  >
-    <rect x="48" y="14" rx="5" ry="5" width="275" height="10" /> 
-    <rect x="52" y="63" rx="5" ry="5" width="220" height="10" />
-  </ContentLoader>
-)
+const TodoItemLoading = props => (
+    <ContentLoader
+        speed={2}
+        width={'100%'}
+        height={'16.8rem'}
+        backgroundColor='#212121'
+        foregroundColor='#1A1B1C'
+        {...props}
+    >
+        <rect x='0' y='0' rx='5' ry='5' width='100%' height='4.6rem' />
+        <rect x='0' y='60' rx='5' ry='5' width='100%' height='4.6rem' />
+        <rect x='0' y='120' rx='5' ry='5' width='100%' height='4.6rem' />
+    </ContentLoader>
+);
 
-export { TodoItemLoading }
+export { TodoItemLoading };

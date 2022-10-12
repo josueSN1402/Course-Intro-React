@@ -8,6 +8,8 @@ import { Modal } from './components/Modal';
 import { AddTodoModal } from './components/AddTodoModal';
 import './styles/layout/App.css';
 
+import { TodoItemLoading } from './assets/TodoItemLoading';
+
 function AppUI() {
     const {
         error,
@@ -20,7 +22,7 @@ function AppUI() {
         todos,
         getSearchValue,
         openModal,
-        setOpenModal
+        setOpenModal,
     } = useContext(TodoContext);
 
     const TaksList = props => {
@@ -32,35 +34,36 @@ function AppUI() {
                 status={props.status}
                 search={searchValue}
             >
-                {todos
-                    .filter(t => t.text.toLowerCase().includes(getSearchValue))
-                    .map(
-                        todo =>
-                            todo.completed === props.status && (
-                                <TodoItem
-                                    key={todo.text}
-                                    text={todo.text}
-                                    completed={todo.completed}
-                                    onComplete={() => completeTodo(todo.text)}
-                                    onDelete={() => deleteTodo(todo.text)}
-                                />
-                            )
-                    )}
+                {error && <p>Desespérate, hubo un error...</p>}
+                {!!loading && <TodoItemLoading />}
+                {!loading &&
+                    todos
+                        .filter(t =>
+                            t.text.toLowerCase().includes(getSearchValue)
+                        )
+                        .map(
+                            todo =>
+                                todo.completed === props.status && (
+                                    <TodoItem
+                                        key={todo.text}
+                                        text={todo.text}
+                                        completed={todo.completed}
+                                        onComplete={() =>
+                                            completeTodo(todo.text)
+                                        }
+                                        onDelete={() => deleteTodo(todo.text)}
+                                    />
+                                )
+                        )}
             </TodoList>
         );
     };
 
     return (
         <div className='Container'>
-            {/*<AddTodoModal />*/}
             <section className='App'>
                 <h1 className='Title'>MY TASKS</h1>
-
                 <TodoSearch />
-
-                {error && <p>Desespérate, hubo un error...</p>}
-                {loading && <p>Estamos cargando, no desesperes...</p>}
-                {/*{(!loading) && <p>¡Crea tu primer TODO!</p>}*/}
 
                 <TaksList
                     title='Pendientes'
@@ -78,7 +81,6 @@ function AppUI() {
                         <AddTodoModal setOpenModal={setOpenModal} />
                     </Modal>
                 )}
-
                 <CreateTodoButton setOpenModal={setOpenModal} />
             </section>
         </div>

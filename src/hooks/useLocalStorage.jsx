@@ -8,6 +8,7 @@ function useLocalStorage(itemName, initialValue) {
     useEffect(() => {
         setTimeout(() => {
             try {
+                // throw 'error';
                 const localStorageItem = localStorage.getItem(itemName);
                 let parsedItem;
 
@@ -27,7 +28,7 @@ function useLocalStorage(itemName, initialValue) {
             } finally {
                 setLoading(false);
             }
-        }, 1500);
+        }, 2000);
     });
 
     const saveItem = newItem => {
