@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/components/TodoItem.css';
-// import Close from '../images/close.svg';
+import { VscCheck, VscDiscard, VscChromeClose } from 'react-icons/vsc';
 
 function TodoItem(props) {
     return (
@@ -12,22 +12,32 @@ function TodoItem(props) {
             <p className='TodoItem-p'>{props.text}</p>
 
             <div className='Icons-container'>
-                {!props.completed && (
-                    <div
-                        className='Icon Icon-check'
-                        aria-label='Botón para tarea terminada'
-                        tabIndex={0}
-                        onClick={props.onComplete}
-                        role='button'
-                    ></div>
-                )}
                 <div
-                    className='Icon Icon-delete'
-                    aria-label='Botón para eliminar tarea'
+                    className='Icon-content'
+                    onClick={props.onComplete}
                     tabIndex={0}
+                    role='button'
+                    aria-label={
+                        !props.completed
+                            ? 'Marcar como tarea terminada'
+                            : 'Desmarcar tarea terminada'
+                    }
+                >
+                    {!props.completed ? (
+                        <VscCheck className='Icon Icon-check' />
+                    ) : (
+                        <VscDiscard className='Icon Icon-discard' />
+                    )}
+                </div>
+                <div
+                    className='Icon-content'
                     onClick={props.onDelete}
-                        role='button'
-                ></div>
+                    tabIndex={0}
+                    role='button'
+                    aria-label='Eliminar tarea'
+                >
+                    <VscChromeClose className='Icon Icon-delete' />
+                </div>
             </div>
         </li>
     );

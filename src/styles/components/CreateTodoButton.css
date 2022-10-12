@@ -13,23 +13,23 @@
   place-items: center;
   height: 5rem;
   width: 5rem;
-
-  transition: .3s ease;
-  box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.3);
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease;
+  transition-duration: .3s;
+  box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, .3);
 }
 
 .CreateTodoButton:hover {
   transform: translateX(-50%) rotate(-135deg);
+  box-shadow: 0px 0px 8px 0px rgba(97, 218, 250, .5);
 }
 
 .Icon-add {
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url('../../images/add.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
+  fill: var(--black-medium);
 }
 
 .Icon-add:hover {
-  background-image: url('../../images/add-active.svg');
+  fill: var(--black-dark);
 }

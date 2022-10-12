@@ -34,26 +34,30 @@
   display: flex;
 }
 
+.Icon-content {
+  cursor: pointer;
+}
+
 .Icon {
   width: 2.2rem;
   height: 2.2rem;
-  cursor: pointer;
-  background-size: contain;
-  background-repeat: no-repeat;
+  fill: var(--gray-regular);
+  outline: none;
+  transition-property: fill;
+  transition-duration: .2s;
 }
 
-.Icon-check {
-  background-image: url('../../images/check.svg');
+.Icon-content:hover .Icon-check,
+.Icon-content:focus .Icon-check {
+  fill: var(--success);
 }
 
-.Icon-delete {
-  background-image: url('../../images/close.svg');
+.Icon-content:hover .Icon-discard,
+.Icon-content:focus .Icon-discard {
+  fill: var(--info);
 }
 
-.Icon-check:hover {
-  background-image: url('../../images/check-active.svg');
-}
-
-.Icon-delete:hover {
-  background-image: url('../../images/close-active.svg');
+.Icon-content:hover .Icon-delete,
+.Icon-content:focus .Icon-delete {
+  fill: var(--danger);
 }

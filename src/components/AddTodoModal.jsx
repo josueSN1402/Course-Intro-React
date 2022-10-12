@@ -1,16 +1,14 @@
 import { useState, useContext } from 'react';
 import { TodoContext } from './TodoContext';
 import '../styles/components/AddTodoModal.css';
+import { VscChromeClose } from 'react-icons/vsc';
 
 function AddTodoModal() {
     const [newTodoValue, setNewTodoValue] = useState('');
 
-    const {
-        addTodo,
-        setOpenModal,
-    } = useContext(TodoContext);
+    const { addTodo, setOpenModal } = useContext(TodoContext);
 
-    const onChange = (event) => {
+    const onChange = event => {
         setNewTodoValue(event.target.value);
     };
 
@@ -18,17 +16,22 @@ function AddTodoModal() {
         setOpenModal(false);
     };
 
-    const onSubmit = (event) => {
-      event.preventDefault();
-      addTodo(newTodoValue);
-      setOpenModal(false);
-      setNewTodoValue('')
+    const onSubmit = event => {
+        event.preventDefault();
+        addTodo(newTodoValue);
+        setOpenModal(false);
+        setNewTodoValue('');
     };
 
     return (
         <div className='Background-section'>
             <div className='Modal'>
-                <div className='Icon-close' onClick={onCancel}></div>
+                <VscChromeClose
+                    className='Icon-close'
+                    onClick={onCancel}
+                    aria-label='Cerrar'
+                    tabIndex={0}
+                />
                 <h4 className='Modal-title'>NUEVA TAREA</h4>
                 <form onSubmit={onSubmit}>
                     <label htmlFor='addTodo'>
