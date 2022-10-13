@@ -23,13 +23,13 @@ function useLocalStorage(itemName, initialValue) {
                 }
 
                 setItem(parsedItem);
+                setLoading(false);
             } catch (error) {
                 setError(error);
-            } finally {
-                setLoading(false);
             }
-        }, 2000);
-    });
+        }, 3000);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const saveItem = newItem => {
         try {
